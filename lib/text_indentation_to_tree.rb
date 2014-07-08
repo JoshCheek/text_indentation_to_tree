@@ -2,8 +2,12 @@ module TextIndentationToTree
   class Node < Struct.new(:is_root, :depth, :line_number, :value, :children)
     alias root? is_root
 
-    def initialize(is_root:, depth:, line_number:, value:, children:)
-      super is_root, depth, line_number, value, children
+    def initialize(attributes)
+      super attributes.fetch(:is_root),
+            attributes.fetch(:depth),
+            attributes.fetch(:line_number),
+            attributes.fetch(:value),
+            attributes.fetch(:children)
     end
   end
 
