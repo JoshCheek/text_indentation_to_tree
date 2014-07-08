@@ -59,6 +59,7 @@ Maybe features will be added one day:
     --depth 2 to show children (default depth = 1)
     --continuation-character="c" to signal that next line is a continuation of previous
   TextIndentationToTree:
+    should work for more than just spaces
     tree-like inspect
     Options to linting
       no_toplevel_indentation: false # implies the first node must have a depth of 0
