@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+# Use like this:
+#   $ scan_notes < file
+# it will print the top-level of lines
+# then say you want to look at the children of 3
+#   $ scan_notes 3 < file
+# you can continue to dig down if you like
+#   $ scan_notes 4 1 3 < file
+
+
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+require 'text_indentation_to_tree/scan_notes'
+
+puts TextIndentationToTree::ScanNotes.call($stdin, ARGV)
